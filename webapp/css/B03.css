@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 561px) {
+	.heights{
+		height:100% !important;
+	}
+	img{
+		max-width: 90% !important;
+	}
+	
+	.top-font{
+		font-size:24px !important;
+	}
+}
+
+@media screen and (min-width: 961px) {
+	.top-font{
+		font-size:28px !important;
+	}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic","Helvetica Neue",
+    Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",
+    "Meiryo",sans-serif;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+    background-image: url(/bookshelf/pict/bookshelf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:lighten;
+    height: 100%;
+}
+
+.bookShelf{
+	margin: 40px auto;
+    width: 86%;
+    height: 72%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 9px groove rgb(128, 64, 0, 0.8);
+}
+
+.book{
+    height: 100%;
+    background-color: rgb(84, 45, 38);
+    border: 2px groove rgb(128, 64, 64);
+}
+
+.heights{
+	height:64%;
+}
+
+.noImage{
+	margin:auto;
+	text-align:center;
+	width:82%;
+	padding:5px 0;
+	font-size:40px;
+	color:gray;
+	border:2px solid;
+	font-weight:bold;
+}
+
+img{
+    max-height: 98%;
+    object-fit:contain;
+}
+
+.top-space{
+	height:20px
+}
+
+.top-font{
+	font-size:16px;
+	font-weight:bold;
+}
+
+.bold{
+	font-weight:bold;
+}

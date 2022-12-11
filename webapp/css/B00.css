@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 520px) {
+	body{
+		background-size: 2200px, 2200px !important;
+	}
+	.topfont{
+    font-size: 70px !important;
+    padding-top:30px;
+	}
+	.backbox{
+	margin-top:20px !important;
+	height:200px !important;
+	}
+	table{
+		display:none;
+	}
+	
+	.spForm{
+		display: block !important;
+	}
+	
+	.failMes{
+		padding-top:6px;
+	}
+}
+
+.spForm{
+	display:none;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-image:url(/bookshelf/pict/bookshelf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Yu Gothic","Helvetica Neue",
+    Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",
+    "Meiryo",sans-serif;
+}
+
+.topfont{
+    font-size: 110px;
+    font-family: "Arial Black";
+    color: white;
+}
+
+.left-space{
+    padding-left: 7%;
+}
+
+.top-space{
+    padding-top: 1%;
+}
+
+.backbox{
+	width:86%;
+	height:106px;
+	background: rgba(255, 255, 255, 0.92);
+}
+
+form{
+	color:gray;	
+}
+
+.form-space{
+    padding-left:4%;
+}
+
+.center{
+    text-align: center;
+    margin:auto;
+}
+
+.button{
+    width:80px;
+    height:30px;
+    background:white;
+    color: gray;
+    border-color: silver;
+    border-radius: 4.5px;
+    box-shadow: none;
+    border:1.4px solid;
+    font-weight: bold;
+}
+
+.button:hover{
+    background: aliceblue;
+}
+
+.button-space{
+	padding-left:8%;
+	padding-bottom: 7px;
+}
+
+.failMes{
+	color:red;
+	font-size:12px;
+	margin:0;
+}

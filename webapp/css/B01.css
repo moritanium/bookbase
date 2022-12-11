@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@media screen and (min-width: 561px) {
+	.pcRow{
+		flex-direction:row!important;
+	}
+	.pcCol{
+		margin-left: 8px!important;
+	}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic","Helvetica Neue",
+    Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",
+    "Meiryo",sans-serif;
+}
+
+body{
+    background-image: url(/bookshelf/pict/bookshelf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:lighten;
+    min-height:100vh;
+}
+
+.sucMes{
+	color:white;
+	font-size:14px;
+	margin:0 auto;
+}
+
+.sucRow{
+	margin-top:10px !important;
+}
+
+summary:hover{
+	cursor:pointer;
+}
+summary{
+	margin-top:10px;
+	text-align: center;
+	color:white;
+}
+
+.pcRow{
+	margin-bottom:10px!important;
+}
+
+.sort{
+	width: 93px;
+}
+.sort:nth-child(n + 2){
+	margin-left: 8px;
+}
+
+.button{
+    width:80px;
+    height:30px;
+    background:white;
+    color: gray;
+    border-color: silver;
+    border-radius: 4.5px;
+    box-shadow: none;
+    border:1.4px solid;
+    font-weight: bold;
+}
+.button:hover{
+    background: aliceblue;
+}
+
+.space{
+	width:100%;
+}
+
+.inline{
+	flex-direction:row!important;
+}
+
+label{
+	color:white;
+	width:70px;
+}
+
+.top-space{
+	margin-top:10px!important;
+}
+
+
+.bookShelf{
+	margin: 20px auto;
+    width: 86%;
+    height: 72vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 9px groove rgb(128, 64, 0, 0.8);
+}
+
+.book{
+    height: 100px;
+    background-color: rgb(84, 45, 38);
+    border: 2px groove rgb(128, 64, 64);
+    position:relative;
+}
+
+.book:hover{
+	background: aliceblue;
+	cursor:pointer;
+}
+
+.line{
+	margin: 46% auto;
+	border: 2px double rgb(244, 164, 96);
+	border-right: none !important;
+    border-left: none !important;
+	height:12%;
+	width:70%;
+}
+
+.anim-box.popup.is-animated{
+  animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+}
+ 
+@keyframes popup {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}
+
+.frame{
+	display:none;
+	position:absolute;
+	border-radius: 10px;
+	border:2px solid #c3c3c3;
+	background-color:white;
+	width:180px;
+	height:200px;
+	z-index:100;
+	left:9%;
+	top:21%;
+	justify-content: center;
+	align-items: center;
+}
+.bookPhoto{
+    max-height: 90%;
+    max-width: 90%;
+    object-fit:contain;
+}
+.frame:hover{
+	display:flex;
+	cursor:pointer;
+}
+
+.book:hover + .frame{
+  display: flex;
+}

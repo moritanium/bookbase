@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 520px) {
+	body{
+		background-size: 2200px, 2200px !important;
+	}
+	.topfont{
+    font-size: 70px !important;
+    padding-top:30px;
+	}
+	.backbox{
+	margin-top:80px !important;
+	}
+	
+	a{
+		font-size:21px !important;
+	}
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-image:url(/bookshelf/pict/bookshelf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Yu Gothic","Helvetica Neue",
+    Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",
+    "Meiryo",sans-serif;
+}
+
+.topfont{
+    font-size: 110px;
+    font-family: Arial Black;
+    color: white;
+}
+
+.left-space{
+    padding-left: 7%;
+}
+
+.backbox{
+	width:86%;
+	height:80px;
+	background: rgba(255, 255, 255, 0.92);
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center{
+    text-align: center;
+    margin:0 auto;
+}
+
+a{
+	height:32%;
+    text-decoration:none;
+    font-size:18px;
+    color:rgb(128, 0, 0);
+    margin:0 auto;
+}
+
+a:hover{
+    background:#c3c3c3;
+}

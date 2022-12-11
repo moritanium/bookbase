@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 561px) {
+	a{
+		width:70px !important;
+		padding:0px 24px !important;
+	}
+	formSize{
+		width:70px !important;
+	}
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "Yu Gothic","Helvetica Neue",
+    Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",
+    "Meiryo",sans-serif;
+}
+
+nav{
+	display:flex;
+    background: #7a4e14;
+    justify-content:center;
+    align-items:center;
+    height:60px;
+    margin:0 auto;
+}
+
+a{
+	padding:0px 2px;
+    margin-right:10px;
+    text-decoration:none;
+    background:#c3c3c3;
+    width:50px;
+    font-size: 10px;
+    color: aliceblue;
+    text-align:center;
+    border: 5px groove aliceblue;
+}
+
+a:hover{
+    background: #e99527;
+}
+
+.navIcon{
+    max-height: 26px;
+    max-width: 26px;
+    object-fit:contain;
+}
+
+.none{
+    margin-right:auto;
+    pointer-events: none;
+    opacity:0;
+}
+
+.navUser{
+	max-width:70px;
+    margin-left:auto;
+    margin-right:4%;
+    pointer-events: none;
+    font-size:12px !important;
+}

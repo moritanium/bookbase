@@ -1,0 +1,149 @@
+@use "sass:math";
+
+// 画面のブレイクポイントのmap
+$breakpoints: (
+  xs: "screen and (min-width: 0px)",
+  sm: "screen and (min-width: 320px)",
+  md: "screen and (min-width: 561px)",
+  lg: "screen and (min-width: 961px)",
+  xl: "screen and (min-width: 1200px)",
+  xxl: "screen and (min-width: 1400px)"
+);
+
+// 要素の間隔のmap
+// 間隔を調整するときはここを変更する
+$gutters: (
+    "small": 1vw,
+    "normal": 2vw,
+    "large": 3vw,
+) !default;
+
+// 要素の位置のmap
+$positions: (
+    justify: space-between,
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    top: flex-start,
+    middle: center,
+    bottom: flex-end    
+);
+
+/*  使い方全般
+最初にdivで囲う。さらにその中の
+親要素に.row、子要素に.colを適用する
+グリッドの大きさや他の機能は
+.???[data-???="???"]を使う
+xs: "screen and (min-width: 0px)",
+スマートフォン用
+sm: "screen and (min-width: 320px)",
+タブレット用
+md: "screen and (min-width: 561px)",
+PC用
+lg: "screen and (min-width: 961px)",
+xl: "screen and (min-width: 1200px)",
+xxl: "screen and (min-width: 1400px)"
+*/
+
+/*  [data-align]の使い方
+justify	: 両端揃え
+start   : 左揃え（逆順の時は右）
+center	: 縦中央揃え
+end	    : 右揃え（逆順の時は左）
+top	    : 上揃え
+middle	: 横中央揃え
+bottom	: 下揃え 
+*/
+.row{
+    // .row全体に適用
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    // 要素の間隔
+    // marginだとグリッドに収まらない場合があるので、
+    // 透明なborderを使用する 
+    &[data-space] {
+        width: auto;
+
+        & > .col {
+            border: solid transparent;
+            background-clip: padding-box;
+        }
+    }
+
+    // 要素の間隔
+    @each $size, $val in $gutters {
+        &[data-space="#{$size}"] {
+            margin: math.div($val - 2 * $val, 2);
+            & > .col {
+                border-width: math.div($val, 2);
+            }
+        }
+    }
+
+    // 要素の位置
+    $j : 1;
+    @each $posi, $state in $positions {
+        &[data-align="#{$posi}"]{
+            @if $j <= 4{
+                justify-content: $state;
+            }
+            @else if 5 <= $j{
+                align-items: $state;
+            }
+        }
+        $j : $j + 1;
+    }
+
+    //要素の並び順
+    &[data-dir="normal"] {
+        flex-direction: row;
+    }
+      
+    &[data-dir="reverse"] {
+        flex-direction: row-reverse;
+    }
+}
+
+.col{
+    // .col全体に適用
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    // グリッドの設定
+    @each $size, $pixel in $breakpoints {
+        @media #{$pixel}{
+            @for $i from 1 through 24{
+                &[data-#{$size}="#{$i}"]{
+                    width: math.div(100%, math.div(24, $i));
+                }
+            }
+            &[data-#{$size}="five"]{
+                width: math.div(100%, 5);
+            }
+            &[data-#{$size}="auto"]{
+                width: auto;
+            }
+        }
+    }
+
+    // 要素の位置
+    $j : 1;
+    @each $posi, $state in $positions {
+        &[data-align="#{$posi}"]{
+            @if $j == 1{
+            }
+            @else if 2 <= $j and $j <= 4{
+                justify-content: $state;
+            }
+            @else {
+                align-items: $state;
+            }
+        }
+        $j : $j + 1;
+    }
+}

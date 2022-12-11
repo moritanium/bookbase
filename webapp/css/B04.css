@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 561px) {
+	.noPreviewS{
+		display:none!important;
+	}
+	.noPreviewL{
+		display:flex!important;
+	}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic","Helvetica Neue",
+    Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",
+    "Meiryo",sans-serif;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+    background-image: url(/bookshelf/pict/bookshelf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:lighten;
+    height: 100%;
+}
+
+.bookShelf{
+	margin: 26px auto;
+    width: 86%;
+    height: 78%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 9px groove rgb(128, 64, 0, 0.8);
+}
+
+.space{
+	width:100%;
+}
+
+.inline{
+	flex-direction:row!important;
+}
+
+label{
+	width:70px;
+}
+
+.row{
+	margin-top: 20px!important;
+}
+
+label, input{
+	color: gray;
+}
+
+input[type="file"] {
+    display:none;
+}
+
+.fileDeco{
+	text-align:center;
+	width:120px;
+	margin-right: 10px;
+    background-color: white;
+    color: gray;
+    cursor: default;
+    border-color: silver;
+    border-radius: 4.5px;
+    box-shadow: none;
+    border:1.4px solid;
+    font-weight: bold;
+    font-size:14px;
+}
+
+.noPreviewL{
+		display:none;
+}
+
+#preTxS{
+	margin-left:72px;
+	font-size:12px;
+	color: gray;
+	line-height:26px;
+	word-break: break-word;
+}
+#preTxL{
+	font-size:12px;
+	color: gray;
+	line-height:26px;
+}
+
+#preImage{
+	max-height: 100px;
+    max-width: 100%;
+    object-fit:contain;
+}
+
+.txSpace{
+	width:70px;
+	height:30px;
+}
+
+.button{
+    width:80px;
+    height:30px;
+    background:white;
+    color: gray;
+    border-color: silver;
+    border-radius: 4.5px;
+    box-shadow: none;
+    border:1.4px solid;
+    font-weight: bold;
+    font-size:18px;
+}
+
+.button:hover, .fileDeco:hover{
+    background: aliceblue;
+}
+
+.failMes{
+	color:red;
+	font-size:14px;
+	margin:0 auto;
+}
+
+.failRow{
+	margin-top:10px !important;
+}

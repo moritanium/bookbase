@@ -1,0 +1,589 @@
+@charset "UTF-8";
+/*  使い方全般
+最初にdivで囲う。さらにその中の
+親要素に.row、子要素に.colを適用する
+グリッドの大きさや他の機能は
+.???[data-???="???"]を使う
+xs: "screen and (min-width: 0px)",
+スマートフォン用
+sm: "screen and (min-width: 320px)",
+タブレット用
+md: "screen and (min-width: 561px)",
+PC用
+lg: "screen and (min-width: 961px)",
+xl: "screen and (min-width: 1200px)",
+xxl: "screen and (min-width: 1400px)"
+*/
+/*  [data-align]の使い方
+justify	: 両端揃え
+start   : 左揃え（逆順の時は右）
+center	: 縦中央揃え
+end	    : 右揃え（逆順の時は左）
+top	    : 上揃え
+middle	: 横中央揃え
+bottom	: 下揃え 
+*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.row[data-space] {
+  width: auto;
+}
+.row[data-space] > .col {
+  border: solid transparent;
+  background-clip: padding-box;
+}
+.row[data-space=small] {
+  margin: -0.5vw;
+}
+.row[data-space=small] > .col {
+  border-width: 0.5vw;
+}
+.row[data-space=normal] {
+  margin: -1vw;
+}
+.row[data-space=normal] > .col {
+  border-width: 1vw;
+}
+.row[data-space=large] {
+  margin: -1.5vw;
+}
+.row[data-space=large] > .col {
+  border-width: 1.5vw;
+}
+.row[data-align=justify] {
+  justify-content: space-between;
+}
+.row[data-align=start] {
+  justify-content: flex-start;
+}
+.row[data-align=center] {
+  justify-content: center;
+}
+.row[data-align=end] {
+  justify-content: flex-end;
+}
+.row[data-align=top] {
+  align-items: flex-start;
+}
+.row[data-align=middle] {
+  align-items: center;
+}
+.row[data-align=bottom] {
+  align-items: flex-end;
+}
+.row[data-dir=normal] {
+  flex-direction: row;
+}
+.row[data-dir=reverse] {
+  flex-direction: row-reverse;
+}
+
+.col {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+@media screen and (min-width: 0px) {
+  .col[data-xs="1"] {
+    width: 4.1666666667%;
+  }
+  .col[data-xs="2"] {
+    width: 8.3333333333%;
+  }
+  .col[data-xs="3"] {
+    width: 12.5%;
+  }
+  .col[data-xs="4"] {
+    width: 16.6666666667%;
+  }
+  .col[data-xs="5"] {
+    width: 20.8333333333%;
+  }
+  .col[data-xs="6"] {
+    width: 25%;
+  }
+  .col[data-xs="7"] {
+    width: 29.1666666667%;
+  }
+  .col[data-xs="8"] {
+    width: 33.3333333333%;
+  }
+  .col[data-xs="9"] {
+    width: 37.5%;
+  }
+  .col[data-xs="10"] {
+    width: 41.6666666667%;
+  }
+  .col[data-xs="11"] {
+    width: 45.8333333333%;
+  }
+  .col[data-xs="12"] {
+    width: 50%;
+  }
+  .col[data-xs="13"] {
+    width: 54.1666666667%;
+  }
+  .col[data-xs="14"] {
+    width: 58.3333333333%;
+  }
+  .col[data-xs="15"] {
+    width: 62.5%;
+  }
+  .col[data-xs="16"] {
+    width: 66.6666666667%;
+  }
+  .col[data-xs="17"] {
+    width: 70.8333333333%;
+  }
+  .col[data-xs="18"] {
+    width: 75%;
+  }
+  .col[data-xs="19"] {
+    width: 79.1666666667%;
+  }
+  .col[data-xs="20"] {
+    width: 83.3333333333%;
+  }
+  .col[data-xs="21"] {
+    width: 87.5%;
+  }
+  .col[data-xs="22"] {
+    width: 91.6666666667%;
+  }
+  .col[data-xs="23"] {
+    width: 95.8333333333%;
+  }
+  .col[data-xs="24"] {
+    width: 100%;
+  }
+  .col[data-xs=five] {
+    width: 20%;
+  }
+  .col[data-xs=auto] {
+    width: auto;
+  }
+}
+@media screen and (min-width: 320px) {
+  .col[data-sm="1"] {
+    width: 4.1666666667%;
+  }
+  .col[data-sm="2"] {
+    width: 8.3333333333%;
+  }
+  .col[data-sm="3"] {
+    width: 12.5%;
+  }
+  .col[data-sm="4"] {
+    width: 16.6666666667%;
+  }
+  .col[data-sm="5"] {
+    width: 20.8333333333%;
+  }
+  .col[data-sm="6"] {
+    width: 25%;
+  }
+  .col[data-sm="7"] {
+    width: 29.1666666667%;
+  }
+  .col[data-sm="8"] {
+    width: 33.3333333333%;
+  }
+  .col[data-sm="9"] {
+    width: 37.5%;
+  }
+  .col[data-sm="10"] {
+    width: 41.6666666667%;
+  }
+  .col[data-sm="11"] {
+    width: 45.8333333333%;
+  }
+  .col[data-sm="12"] {
+    width: 50%;
+  }
+  .col[data-sm="13"] {
+    width: 54.1666666667%;
+  }
+  .col[data-sm="14"] {
+    width: 58.3333333333%;
+  }
+  .col[data-sm="15"] {
+    width: 62.5%;
+  }
+  .col[data-sm="16"] {
+    width: 66.6666666667%;
+  }
+  .col[data-sm="17"] {
+    width: 70.8333333333%;
+  }
+  .col[data-sm="18"] {
+    width: 75%;
+  }
+  .col[data-sm="19"] {
+    width: 79.1666666667%;
+  }
+  .col[data-sm="20"] {
+    width: 83.3333333333%;
+  }
+  .col[data-sm="21"] {
+    width: 87.5%;
+  }
+  .col[data-sm="22"] {
+    width: 91.6666666667%;
+  }
+  .col[data-sm="23"] {
+    width: 95.8333333333%;
+  }
+  .col[data-sm="24"] {
+    width: 100%;
+  }
+  .col[data-sm=five] {
+    width: 20%;
+  }
+  .col[data-sm=auto] {
+    width: auto;
+  }
+}
+@media screen and (min-width: 561px) {
+  .col[data-md="1"] {
+    width: 4.1666666667%;
+  }
+  .col[data-md="2"] {
+    width: 8.3333333333%;
+  }
+  .col[data-md="3"] {
+    width: 12.5%;
+  }
+  .col[data-md="4"] {
+    width: 16.6666666667%;
+  }
+  .col[data-md="5"] {
+    width: 20.8333333333%;
+  }
+  .col[data-md="6"] {
+    width: 25%;
+  }
+  .col[data-md="7"] {
+    width: 29.1666666667%;
+  }
+  .col[data-md="8"] {
+    width: 33.3333333333%;
+  }
+  .col[data-md="9"] {
+    width: 37.5%;
+  }
+  .col[data-md="10"] {
+    width: 41.6666666667%;
+  }
+  .col[data-md="11"] {
+    width: 45.8333333333%;
+  }
+  .col[data-md="12"] {
+    width: 50%;
+  }
+  .col[data-md="13"] {
+    width: 54.1666666667%;
+  }
+  .col[data-md="14"] {
+    width: 58.3333333333%;
+  }
+  .col[data-md="15"] {
+    width: 62.5%;
+  }
+  .col[data-md="16"] {
+    width: 66.6666666667%;
+  }
+  .col[data-md="17"] {
+    width: 70.8333333333%;
+  }
+  .col[data-md="18"] {
+    width: 75%;
+  }
+  .col[data-md="19"] {
+    width: 79.1666666667%;
+  }
+  .col[data-md="20"] {
+    width: 83.3333333333%;
+  }
+  .col[data-md="21"] {
+    width: 87.5%;
+  }
+  .col[data-md="22"] {
+    width: 91.6666666667%;
+  }
+  .col[data-md="23"] {
+    width: 95.8333333333%;
+  }
+  .col[data-md="24"] {
+    width: 100%;
+  }
+  .col[data-md=five] {
+    width: 20%;
+  }
+  .col[data-md=auto] {
+    width: auto;
+  }
+}
+@media screen and (min-width: 961px) {
+  .col[data-lg="1"] {
+    width: 4.1666666667%;
+  }
+  .col[data-lg="2"] {
+    width: 8.3333333333%;
+  }
+  .col[data-lg="3"] {
+    width: 12.5%;
+  }
+  .col[data-lg="4"] {
+    width: 16.6666666667%;
+  }
+  .col[data-lg="5"] {
+    width: 20.8333333333%;
+  }
+  .col[data-lg="6"] {
+    width: 25%;
+  }
+  .col[data-lg="7"] {
+    width: 29.1666666667%;
+  }
+  .col[data-lg="8"] {
+    width: 33.3333333333%;
+  }
+  .col[data-lg="9"] {
+    width: 37.5%;
+  }
+  .col[data-lg="10"] {
+    width: 41.6666666667%;
+  }
+  .col[data-lg="11"] {
+    width: 45.8333333333%;
+  }
+  .col[data-lg="12"] {
+    width: 50%;
+  }
+  .col[data-lg="13"] {
+    width: 54.1666666667%;
+  }
+  .col[data-lg="14"] {
+    width: 58.3333333333%;
+  }
+  .col[data-lg="15"] {
+    width: 62.5%;
+  }
+  .col[data-lg="16"] {
+    width: 66.6666666667%;
+  }
+  .col[data-lg="17"] {
+    width: 70.8333333333%;
+  }
+  .col[data-lg="18"] {
+    width: 75%;
+  }
+  .col[data-lg="19"] {
+    width: 79.1666666667%;
+  }
+  .col[data-lg="20"] {
+    width: 83.3333333333%;
+  }
+  .col[data-lg="21"] {
+    width: 87.5%;
+  }
+  .col[data-lg="22"] {
+    width: 91.6666666667%;
+  }
+  .col[data-lg="23"] {
+    width: 95.8333333333%;
+  }
+  .col[data-lg="24"] {
+    width: 100%;
+  }
+  .col[data-lg=five] {
+    width: 20%;
+  }
+  .col[data-lg=auto] {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col[data-xl="1"] {
+    width: 4.1666666667%;
+  }
+  .col[data-xl="2"] {
+    width: 8.3333333333%;
+  }
+  .col[data-xl="3"] {
+    width: 12.5%;
+  }
+  .col[data-xl="4"] {
+    width: 16.6666666667%;
+  }
+  .col[data-xl="5"] {
+    width: 20.8333333333%;
+  }
+  .col[data-xl="6"] {
+    width: 25%;
+  }
+  .col[data-xl="7"] {
+    width: 29.1666666667%;
+  }
+  .col[data-xl="8"] {
+    width: 33.3333333333%;
+  }
+  .col[data-xl="9"] {
+    width: 37.5%;
+  }
+  .col[data-xl="10"] {
+    width: 41.6666666667%;
+  }
+  .col[data-xl="11"] {
+    width: 45.8333333333%;
+  }
+  .col[data-xl="12"] {
+    width: 50%;
+  }
+  .col[data-xl="13"] {
+    width: 54.1666666667%;
+  }
+  .col[data-xl="14"] {
+    width: 58.3333333333%;
+  }
+  .col[data-xl="15"] {
+    width: 62.5%;
+  }
+  .col[data-xl="16"] {
+    width: 66.6666666667%;
+  }
+  .col[data-xl="17"] {
+    width: 70.8333333333%;
+  }
+  .col[data-xl="18"] {
+    width: 75%;
+  }
+  .col[data-xl="19"] {
+    width: 79.1666666667%;
+  }
+  .col[data-xl="20"] {
+    width: 83.3333333333%;
+  }
+  .col[data-xl="21"] {
+    width: 87.5%;
+  }
+  .col[data-xl="22"] {
+    width: 91.6666666667%;
+  }
+  .col[data-xl="23"] {
+    width: 95.8333333333%;
+  }
+  .col[data-xl="24"] {
+    width: 100%;
+  }
+  .col[data-xl=five] {
+    width: 20%;
+  }
+  .col[data-xl=auto] {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .col[data-xxl="1"] {
+    width: 4.1666666667%;
+  }
+  .col[data-xxl="2"] {
+    width: 8.3333333333%;
+  }
+  .col[data-xxl="3"] {
+    width: 12.5%;
+  }
+  .col[data-xxl="4"] {
+    width: 16.6666666667%;
+  }
+  .col[data-xxl="5"] {
+    width: 20.8333333333%;
+  }
+  .col[data-xxl="6"] {
+    width: 25%;
+  }
+  .col[data-xxl="7"] {
+    width: 29.1666666667%;
+  }
+  .col[data-xxl="8"] {
+    width: 33.3333333333%;
+  }
+  .col[data-xxl="9"] {
+    width: 37.5%;
+  }
+  .col[data-xxl="10"] {
+    width: 41.6666666667%;
+  }
+  .col[data-xxl="11"] {
+    width: 45.8333333333%;
+  }
+  .col[data-xxl="12"] {
+    width: 50%;
+  }
+  .col[data-xxl="13"] {
+    width: 54.1666666667%;
+  }
+  .col[data-xxl="14"] {
+    width: 58.3333333333%;
+  }
+  .col[data-xxl="15"] {
+    width: 62.5%;
+  }
+  .col[data-xxl="16"] {
+    width: 66.6666666667%;
+  }
+  .col[data-xxl="17"] {
+    width: 70.8333333333%;
+  }
+  .col[data-xxl="18"] {
+    width: 75%;
+  }
+  .col[data-xxl="19"] {
+    width: 79.1666666667%;
+  }
+  .col[data-xxl="20"] {
+    width: 83.3333333333%;
+  }
+  .col[data-xxl="21"] {
+    width: 87.5%;
+  }
+  .col[data-xxl="22"] {
+    width: 91.6666666667%;
+  }
+  .col[data-xxl="23"] {
+    width: 95.8333333333%;
+  }
+  .col[data-xxl="24"] {
+    width: 100%;
+  }
+  .col[data-xxl=five] {
+    width: 20%;
+  }
+  .col[data-xxl=auto] {
+    width: auto;
+  }
+}
+.col[data-align=start] {
+  justify-content: flex-start;
+}
+.col[data-align=center] {
+  justify-content: center;
+}
+.col[data-align=end] {
+  justify-content: flex-end;
+}
+.col[data-align=top] {
+  align-items: flex-start;
+}
+.col[data-align=middle] {
+  align-items: center;
+}
+.col[data-align=bottom] {
+  align-items: flex-end;
+}
